@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +29,19 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    //Rutas para usuario
     Route::resource('usuarios', UsuarioController::class)->names('usuarios');
+
+    //Rutas para empleados
+    Route::resource('empleados', EmpleadoController::class)->names('empleados');
+
+    //Rutas para clientes
+    Route::resource('clientes', ClienteController::class)->names('clientes');
+
+    //Rutas para clientes
+    Route::resource('proveedores', ProveedorController::class)->names('proveedores');
+
 });
 
 

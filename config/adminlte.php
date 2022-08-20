@@ -329,7 +329,7 @@ return [
                         [
                             'text'       => 'Proveedores',
                             'icon_color' => 'cyan',
-                            'url'        => 'proveedores',
+                            'url'        => '/proveedores',
                         ],
                     ],
                 ],
