@@ -8,9 +8,19 @@
 
 @section('content')
 
-
-<!-- Main content -->
-<section class="content">
+<div class="wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Usuarios</h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- Main content -->
+  <section class="content">
     <div class="container-fluid">
       <!-- EMPLEADOS -->
       <!-- /.row -->
@@ -120,26 +130,24 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @php $i=1;@endphp
-                    @foreach ($usuarios as $usuario)
-                    
-
-                    <tr>
-                        <td>{{$i}}</td>
-                        <td>{{$usuario['usr_password']}}</td>
-                        <td>{{$usuario['usr_nom_usuario']}}</td>
-                        <td>{{$usuario['usr_cod_empleado']}}</td>
-                        <td>{{$usuario['usr_cod_estatus']}}</td>
-                        <td>{{$usuario['usr_loguead']}}</td>
-                        <td>{{$usuario['usr_cod_tipo_usuario']}}</td>
-                        
-                        <td>
-                          <button class="btn btn-outline-dark" onclick="CargarPedido('+MiItems[i].ID+')"><i class="fas fa-edit"></i></button>
-                          <button class="btn btn-outline-danger" onclick="EliminarPedido('+MiItems[i].ID+')"><i class="fas fa-trash"></i></button>
-                        </td>
-                      </tr>
-                      @php $i++;@endphp
-                    @endforeach                  
+                  @php $i=1;@endphp
+                  @foreach ($usuarios as $usuario)
+                  <tr>
+                      <td>{{$i}}</td>
+                      <td>{{$usuario['usr_password']}}</td>
+                      <td>{{$usuario['usr_nom_usuario']}}</td>
+                      <td>{{$usuario['usr_cod_empleado']}}</td>
+                      <td>{{$usuario['usr_cod_estatus']}}</td>
+                      <td>{{$usuario['usr_loguead']}}</td>
+                      <td>{{$usuario['usr_cod_tipo_usuario']}}</td>
+                      
+                      <td>
+                        <button class="btn btn-outline-dark" onclick="CargarPedido('+MiItems[i].ID+')"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-outline-danger" onclick="EliminarPedido('+MiItems[i].ID+')"><i class="fas fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    @php $i++;@endphp
+                  @endforeach                  
                 </tbody>
               </table>
             </div>
@@ -162,7 +170,8 @@
     </div><!-- /.container-fluid -->
   </section>
   <!-- /.content -->
-    
+</div>
+<!-- ./wrapper -->
 @stop
 
 @section('css')
@@ -172,4 +181,3 @@
 @section('js')
     <script> console.log('Hi!'); </script>
 @stop
-
