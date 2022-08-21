@@ -52,53 +52,33 @@
                               <hr>
                             </div>
                             <div class="col-12">
-                              <form action="{{route('usuarios.store')}}" method="post" class="tipousuario"> 
+                              <form action="{{route('encargas.store')}}" method="post" class="tipoencargas"> 
                                 @csrf
                                 <div class="row g-3">
                                   <div class="col">
-                                    <label for="">Usuario</label> 
-                                    <input type="text" id="cod_usuario" class="form-control" placeholder="Ingrese el Usuario" aria-label="Primer Nombre">
+                                    <label for="">Cantidad</label>
+                                    <input type="text" id="cantidad" class="form-control" placeholder="Ingrese la cantidad exacta de la carga.">
                                   </div>
                                   <div class="col">
-                                    <label for="">Password</label> 
-                                    <input type="password" id="password" class="form-control" placeholder=" Ingrese la contraseña" aria-label="Segundo nombre">
+                                    <label for="">Peso (Kg)</label>
+                                    <input type="text" id="peso_carga_entreg" class="form-control" placeholder="Ingrese el peso en Kilos.">
+                                  </div>
+                                </div>                  
+                                <div class="row g-3">                      
+                                  <div class="col">
+                                    <label for="">Descripción</label>
+                                    <input type="text" id="descripcion" class="form-control" placeholder="Ingrese la descripción de la carga.">
+                                  </div>                      
+                                  <div class="col">
+                                    <label for="">Fecha Entregada</label>
+                                    <input type="date" id="fecha_entrega" class = "form-control"  >
                                   </div>
                                 </div>
-
-                                <div class="row g-3">
-                                  <div class="col">
-                                      <label for="">Nombre del Usuario</label>
-                                      <input type="text" id="nombre_usuario" class = "form-control" placeholder="Ingrese Nombre del Usuario">
-                                  </div>
-                                  <div class="col">
-                                      <label for="">Codigo de Empleado</label> 
-                                      <input type="text" id="cod_empleado" class="form-control" placeholder="Ingrese el Codigo de Empleado">
-                                  </div>
-                                </div>
+                                <br> 
                                 
-                                <div class="row g-3">
-                                  <div class="col">
-                                    <label for="">Estatus</label>
-                                    <input type="text" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Usuario">
-                                  </div>
-                                  <div class="col">
-                                    <label for="">Tipo de Usuario</label>
-                                    <input type="text" id="cod_tipo_user" class= "form-control" placeholder="Ingrese el Tipo de Usuario">
-                                  </div>
-                                </div>
-                                
-                                <div class="row g-3">
-                                  <div class="col">
-                                    <label for="">Fecha de Creación</label>
-                                    <input type="text" id="fecha_crea_user" class = "form-control"  placeholder = "Ingrese la fecha de Creacion del Usuario">
-                                  </div>
-                                
-                                </div>
-                                <br>
-
                                 <div class="modal-footer">
                                   <div class="btnagregar">
-                                    <input type="submit" id="btn_agregar"  value="Agregar Usuario" class = "btn btn-success">
+                                    <input type="submit" id="btn_agregar"  value="Agregar Carga Entregada" class = "btn btn-success">
                                   </div>
                                 </div>
                               </form>
@@ -116,19 +96,17 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>Código Usuario</th>
-                    <th>Contraseña</th>
-                    <th>Nombre Usuario</th>
-                    <th>Código Empleado</th>
-                    <th>Estatus</th>
-                    <th>Tipo de Usuario</th>
-                    <th>Última Conexión</th>
+                    <th>Código Carga</th>
+                    <th>Cantidad</th>
+                    <th>Peso (Kg)</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Entregado</th>
                     <th>Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
                   @php $i=1;@endphp
-                  @foreach ($usuarios as $usuario)
+                  @foreach ($encargas as $encarga)
                   <tr>
                       <td>{{$i}}</td>
                       <td>{{$usuario['usr_password']}}</td>

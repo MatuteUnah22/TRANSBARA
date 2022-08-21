@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CargasAgrController;
+use App\Http\Controllers\CargasEntController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProveedorController;
@@ -45,6 +46,9 @@ Route::middleware([
 
     //Rutas para cargas
     Route::resource('agcargas', CargasAgrController::class)->names('agcargas');
+
+    //Rutas para cargas entegadas
+    Route::resource('encargas', CargasEntController::class)->names('encargas');
 
 });
 
