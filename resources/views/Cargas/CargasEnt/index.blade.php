@@ -14,7 +14,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Usuarios</h1>
+          <h1>Servicios</h1>
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -28,11 +28,11 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Mantenimiento de Usuarios</h3>
+              <h3 class="card-title">Lista de Cargas Entregadas</h3>
 
               <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
-                  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#miModal" ><i class="fas fa-plus"></i> Agregar Usuario</button>
+                  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#miModal" ><i class="fas fa-plus"></i> Entregadas</button>
                 </div>
 
                
@@ -40,7 +40,7 @@
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitle" >Agregar Nuevo Usuario</h5>
+                        <h5 class="modal-title" id="modalTitle" >Agregar Carga Entregada</h5>
                         <button type="button" class="close" data-dismiss="modal" >&times;</button>
                       </div>
                       <div class="modal-body">                        
