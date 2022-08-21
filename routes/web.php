@@ -5,6 +5,7 @@ use App\Http\Controllers\CargasEntController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\TipoContratoController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +50,9 @@ Route::middleware([
 
     //Rutas para cargas entegadas
     Route::resource('encargas', CargasEntController::class)->names('encargas');
+
+    //Rutas para tipo de contrato
+    Route::resource('tipcontratos', TipoContratoController::class)->names('tipcontratos');
 
 });
 

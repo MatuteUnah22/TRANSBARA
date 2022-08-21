@@ -490,6 +490,16 @@ return [
                             'icon_color' => 'cyan',
                             'url'        => '/tipcontratos',
                         ],
+                        [
+                            'text'       => 'Paises',
+                            'icon_color' => 'cyan',
+                            'url'        => '/paises',
+                        ],
+                        [
+                            'text'       => 'Objetos',
+                            'icon_color' => 'cyan',
+                            'url'        => '/objetos',
+                        ],
                     ],
                 ],
                 [

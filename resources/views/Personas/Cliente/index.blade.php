@@ -54,66 +54,66 @@
                               <form action="{{route('clientes.store')}}" method="post" class="tipocliente"> 
                                 @csrf
                                 <div class="row g-3">
-                                    <div class="col">
-                                      <label for="">Nombre Cliente</label> 
-                                      <input type="text" id="nombre_cliente" class="form-control" placeholder="Ingrese el Nombre del cliente" aria-label="Nombre ">
-                                    </div>
-                                    <div class="col">
-                                      <label for="">Tiene RTN</label> 
-                                      <br>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                      </div>
-                                    </div>
-                                  </div>
-        
-                                  <div class="row g-3">
-                                    <div class="col">
-                                      <label for="">ID Cliente</label>
-                                      <input type="text" id="num_ident_ciente" class = "form-control" placeholder="Ingrese el numero de ID del Cliente">
-                                    </div>
-                                    <div class="col">
-                                      <label for="">Tipo de Persona</label> 
-                                      <input type="text" id="cod_tipo_perso" class="form-control" placeholder="Ingrese el tipo de Persona">
-                                    </div>
-                                  </div>
-                                  
-                                  <div class="row g-3">
-                                    <div class="col">
-                                      <label for="">Estatus</label>
-                                      <input type="text" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Cliente">
-                                    </div>
-                                    <div class="col">
-                                      <label for="">telefono</label>
-                                      <input type="text" id="telefono_cliente" class= "form-control" placeholder="Ingrese el Telefono del Cliente">
-                                    </div>
-                                  </div>
-                                  
-                                  <div class="row g-3">
-                                    <div class="col">
-                                      <label for="">Email</label>
-                                      <input type="text" id="email_cliente" class = "form-control"  placeholder = "Ingrese el correo electronico del cliente">
-                                    </div>
-                                    <div class="col">
-                                      <label for="">Pais de Origen</label>
-                                      <input type="text" id="cod_pais" class= "form-control" placeholder="Ingrese el Pais de Origen del Cliente">
-                                  </div>
-                                  </div>
-        
-                                  <label for="">Dirección</label>
-                                  <input type="text" id="direccion_emple" class = "form-control"  placeholder = "Ingrese la Direccion del Empleado">
+                                <div class="col">
+                                  <label for="">Nombre Cliente</label> 
+                                  <input type="text" id="nombre_cliente" class="form-control" placeholder="Ingrese el Nombre del cliente" aria-label="Nombre ">
+                                </div>
+                                <div class="col">
+                                  <label for="">Tiene RTN</label> 
                                   <br>
-                                
-                                  <div class="modal-footer">
-                                    <div class="btnagregar">
-                                      <input type="submit" id="btn_agregar"  value="Agregar Cliente" class = "btn btn-success">
-                                    </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Si</label>
                                   </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                  </div>
+                                </div>
+                                </div>
+      
+                                <div class="row g-3">
+                                  <div class="col">
+                                    <label for="">ID Cliente</label>
+                                    <input type="text" id="num_ident_ciente" class = "form-control" placeholder="Ingrese el numero de ID del Cliente">
+                                  </div>
+                                  <div class="col">
+                                    <label for="">Tipo de Persona</label> 
+                                    <input type="text" id="cod_tipo_perso" class="form-control" placeholder="Ingrese el tipo de Persona">
+                                  </div>
+                                </div>
+                                
+                                <div class="row g-3">
+                                  <div class="col">
+                                    <label for="">Estatus</label>
+                                    <input type="text" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Cliente">
+                                  </div>
+                                  <div class="col">
+                                    <label for="">telefono</label>
+                                    <input type="text" id="telefono_cliente" class= "form-control" placeholder="Ingrese el Telefono del Cliente">
+                                  </div>
+                                </div>
+                                
+                                <div class="row g-3">
+                                  <div class="col">
+                                    <label for="">Email</label>
+                                    <input type="text" id="email_cliente" class = "form-control"  placeholder = "Ingrese el correo electronico del cliente">
+                                  </div>
+                                  <div class="col">
+                                    <label for="">Pais de Origen</label>
+                                    <input type="text" id="cod_pais" class= "form-control" placeholder="Ingrese el Pais de Origen del Cliente">
+                                </div>
+                                </div>
+      
+                                <label for="">Dirección</label>
+                                <input type="text" id="direccion_emple" class = "form-control"  placeholder = "Ingrese la Direccion del Empleado">
+                                <br>
+                              
+                                <div class="modal-footer">
+                                  <div class="btnagregar">
+                                    <input type="submit" id="btn_agregar"  value="Agregar Cliente" class = "btn btn-success">
+                                  </div>
+                                </div>
                               </form>
                             </div>
                           </div>
@@ -128,23 +128,16 @@
             <div class="card-body table-responsive p-0">
               <table class="table table-hover text-nowrap">
                 <thead>
-                    <tr>
-                        <th>Código Empleado</th>
-                        <th>Primer Nombre</th>
-                        <th>Segundo Nombre</th>
-                        <th>Primer Apellido</th>
-                        <th>Segundo Apellido</th>
-                        <th>Identidad</th>
-                        <th>Teléfono</th>
-                        <th>Dirección</th>
-                        <th>Email</th>
-                        <th>Estado Civil</th>
-                        <th>Estado</th>
-                        <th>Fecha Ingreso</th>
-                        <th>Cargo</th>                      
-                        <th>Tipo Contrato</th>
-                        <th>Acciones</th>
-                      </tr>
+                  <tr>
+                    <th>Código Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Nombre Usuario</th>
+                    <th>Código Empleado</th>
+                    <th>Estatus</th>
+                    <th>Tipo de Usuario</th>
+                    <th>Última Conexión</th>
+                    <th>Acciones</th>
+                  </tr>
                 </thead>
                 <tbody>
                   @php $i=1;@endphp
