@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CargasAgrController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProveedorController;
@@ -42,6 +43,8 @@ Route::middleware([
     //Rutas para clientes
     Route::resource('proveedores', ProveedorController::class)->names('proveedores');
 
-});
+    //Rutas para cargas
+    Route::resource('agcargas', CargasAgrController::class)->names('agcargas');
 
+});
 

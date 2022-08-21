@@ -14,7 +14,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Usuarios</h1>
+          <h1>Servicios</h1>
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -28,11 +28,11 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Mantenimiento de Usuarios</h3>
+              <h3 class="card-title">Lista de Cargas a enviar</h3>
 
               <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
-                  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#miModal" ><i class="fas fa-plus"></i> Agregar Usuario</button>
+                  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#miModal" ><i class="fas fa-plus"></i> Agregar Carga</button>
                 </div>
 
                
@@ -40,7 +40,7 @@
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitle" >Agregar Nuevo Usuario</h5>
+                        <h5 class="modal-title" id="modalTitle" >Agregar Nuevas Cargas</h5>
                         <button type="button" class="close" data-dismiss="modal" >&times;</button>
                       </div>
                       <div class="modal-body">                        
@@ -52,53 +52,33 @@
                               <hr>
                             </div>
                             <div class="col-12">
-                              <form action="{{route('usuarios.store')}}" method="post" class="tipousuario"> 
+                              <form action="{{route('agcargas.store')}}" method="post" class="tipoagcargas"> 
                                 @csrf
                                 <div class="row g-3">
                                   <div class="col">
-                                    <label for="">Usuario</label> 
-                                    <input type="text" id="cod_usuario" class="form-control" placeholder="Ingrese el Usuario" aria-label="Primer Nombre">
+                                    <label for="">Cantidad</label>
+                                    <input type="text" id="cantidad" class="form-control" placeholder="Ingrese la cantidad exacta de la carga">
                                   </div>
                                   <div class="col">
-                                    <label for="">Password</label> 
-                                    <input type="password" id="password" class="form-control" placeholder=" Ingrese la contraseña" aria-label="Segundo nombre">
+                                    <label for="">Peso (Kg)</label>
+                                    <input type="text" id="peso_carga_agreg" class="form-control" placeholder="Ingrese el peso en Kilos">
+                                  </div>
+                                </div>                  
+                                <div class="row g-3">                      
+                                  <div class="col">
+                                    <label for="">Descripción</label>
+                                    <input type="text" id="descripcion" class="form-control" placeholder="Ingrese la descripción de la carga">
+                                  </div>                      
+                                  <div class="col">
+                                    <label for="">Fecha de Ingreso</label>
+                                    <input type="date" id="fecha_carga_enviar" class = "form-control"  >
                                   </div>
                                 </div>
-
-                                <div class="row g-3">
-                                  <div class="col">
-                                      <label for="">Nombre del Usuario</label>
-                                      <input type="text" id="nombre_usuario" class = "form-control" placeholder="Ingrese Nombre del Usuario">
-                                  </div>
-                                  <div class="col">
-                                      <label for="">Codigo de Empleado</label> 
-                                      <input type="text" id="cod_empleado" class="form-control" placeholder="Ingrese el Codigo de Empleado">
-                                  </div>
-                                </div>
+                                <br> 
                                 
-                                <div class="row g-3">
-                                  <div class="col">
-                                    <label for="">Estatus</label>
-                                    <input type="text" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Usuario">
-                                  </div>
-                                  <div class="col">
-                                    <label for="">Tipo de Usuario</label>
-                                    <input type="text" id="cod_tipo_user" class= "form-control" placeholder="Ingrese el Tipo de Usuario">
-                                  </div>
-                                </div>
-                                
-                                <div class="row g-3">
-                                  <div class="col">
-                                    <label for="">Fecha de Creación</label>
-                                    <input type="text" id="fecha_crea_user" class = "form-control"  placeholder = "Ingrese la fecha de Creacion del Usuario">
-                                  </div>
-                                
-                                </div>
-                                <br>
-
                                 <div class="modal-footer">
                                   <div class="btnagregar">
-                                    <input type="submit" id="btn_agregar"  value="Agregar Usuario" class = "btn btn-success">
+                                    <input type="submit" id="btn_agregar"  value="Agregar Carga" class = "btn btn-success">
                                   </div>
                                 </div>
                               </form>
@@ -116,19 +96,17 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>Código Usuario</th>
-                    <th>Contraseña</th>
-                    <th>Nombre Usuario</th>
-                    <th>Código Empleado</th>
-                    <th>Estatus</th>
-                    <th>Tipo de Usuario</th>
-                    <th>Última Conexión</th>
+                    <th>Código Carga</th>
+                    <th>Cantidad</th>
+                    <th>Peso (Kg)</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Envío</th>
                     <th>Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
                   @php $i=1;@endphp
-                  @foreach ($usuarios as $usuario)
+                  @foreach ($agcargas as $agcarga)
                   <tr>
                       <td>{{$i}}</td>
                       <td>{{$usuario['usr_password']}}</td>
@@ -139,8 +117,8 @@
                       <td>{{$usuario['usr_fec_ult_conex']}}</td>
                       
                       <td>
-                        <button class="btn btn-outline-dark" onclick="CargarPedido('+MiItems[i].ID+')"><i class="fas fa-edit"></i></button>
-                        <button class="btn btn-outline-danger" onclick="EliminarPedido('+MiItems[i].ID+')"><i class="fas fa-trash"></i></button>
+                        <button class="btn btn-outline-dark" onclick="CargarPedido('+MiItems[i].ID+')"><ii class="fas fa-edit"></ii></button>
+                        <button class="btn btn-outline-danger" onclick="EliminarPedido('+MiItems[i].ID+')"><ii class="fas fa-trash"></ii></button>
                       </td>
                     </tr>
                     @php $i++;@endphp
@@ -172,10 +150,10 @@
 @stop
 
 @section('footer')
-<div class="float-right d-none d-sm-block">
-  <b>Version</b> 1.0.0
-</div>
-<strong>Copyright &copy; 2022-2023 <a href="#">Empresa de Transportes Barahona Morazán</a>.</strong> All rights reserved.
+  <div class="float-right d-none d-sm-block">
+    <b>Version</b> 1.0.0
+  </div>
+  <strong>Copyright &copy; 2022-2023 <a href="#">Empresa de Transportes Barahona Morazán</a>.</strong> All rights reserved.
 @stop
 
 @section('css')
