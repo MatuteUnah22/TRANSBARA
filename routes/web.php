@@ -61,5 +61,23 @@ Route::middleware([
 
     //Rutas para paises
     Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para Registro Compras COPIAS
+    //Route::resource('recompras', ComprasController::class)->names('recompras');
+
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+   //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
 });
 
