@@ -78,8 +78,8 @@ Route::middleware([
     //Rutas para paises COPIAS
     Route::resource('objetos', ObjetosController::class)->names('objetos');
 
-    //Rutas para paises COPIAS
-   // Route::resource('paises', PaisesController::class)->names('paises');
+    //Rutas para planillas
+    //Route::resource('planillas', Planilla::class)->names('planillas');
 
    //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');
