@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
-class TipoContratoController extends Controller
+class CoPendientesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,11 @@ class TipoContratoController extends Controller
      */
     public function index()
     {
-        $response = Http::get('http://localhost:3000/tipo_contrato/');
-        $tipcontratos = $response->json();
-        //dd($usuarios[0]);
-        return view('Parametrizacion.Contrato.index')->with('tipcontratos', $tipcontratos[0]);
-
+            $response = Http::get('http://localhost:3000/compras_pendientes/');
+            $copendientes = $response->json();
+            //dd($copendientes[0]);
+            return view('Compras.PenCompras.index')->with('copendientes', $copendientes[0]);
+    
     }
 
     /**

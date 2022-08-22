@@ -2,8 +2,14 @@
 
 use App\Http\Controllers\CargasAgrController;
 use App\Http\Controllers\CargasEntController;
+use App\Http\Controllers\CargosController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ComprasController;
+use App\Http\Controllers\CoPendientesController;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\ObjetosController;
+use App\Http\Controllers\PaisesController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\TipoContratoController;
 use App\Http\Controllers\UsuarioController;
@@ -54,5 +60,37 @@ Route::middleware([
     //Rutas para tipo de contrato
     Route::resource('tipcontratos', TipoContratoController::class)->names('tipcontratos');
 
+    //Rutas para Registro Compras
+    Route::resource('recompras', ComprasController::class)->names('recompras');
+
+    //Rutas para paises
+    Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para Compras Pendientes
+    Route::resource('copendientes', CoPendientesController::class)->names('copendientes');
+
+    //Rutas para tipo de estados
+    Route::resource('tipestados', EstadoController::class)->names('tipestados');
+
+    //Rutas para tipo de cargos
+    Route::resource('tipcargos', CargosController::class)->names('tipcargos');
+
+    //Rutas para paises COPIAS
+    Route::resource('objetos', ObjetosController::class)->names('objetos');
+
+    //Rutas para planillas
+    //Route::resource('planillas', Planilla::class)->names('planillas');
+
+   //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+   //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
 });
 

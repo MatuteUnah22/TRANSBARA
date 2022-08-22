@@ -5,21 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
-class TipoContratoController extends Controller
+class ComprasController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   
+        public function index()
     {
-        $response = Http::get('http://localhost:3000/tipo_contrato/');
-        $tipcontratos = $response->json();
+        $response = Http::get('http://localhost:3000/registro_compras/');
+        $recompras = $response->json();
         //dd($usuarios[0]);
-        return view('Parametrizacion.Contrato.index')->with('tipcontratos', $tipcontratos[0]);
+        return view('Compras.ReCompras.index')->with('recompras', $recompras[0]);
 
     }
+    
 
     /**
      * Show the form for creating a new resource.
