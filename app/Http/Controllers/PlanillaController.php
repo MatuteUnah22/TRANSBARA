@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
 class PlanillaController extends Controller
@@ -14,10 +14,10 @@ class PlanillaController extends Controller
      */
     public function index()
     {
-        $response = Http::get('http://localhost:3000/usuarios/');
+        $response = Http::get('http://localhost:3000/Salario/');
         $planillas = $response->json();
         //dd($usuarios[0]);
-        return view('Personas.Usuario.index')->with('planillas', $planillas[0]);
+        return view('Planilla.index')->with('planillas', $planillas[0]);
     }
 
     /**
