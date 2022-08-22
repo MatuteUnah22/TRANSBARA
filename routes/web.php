@@ -5,6 +5,7 @@ use App\Http\Controllers\CargasEntController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\PaisesController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\TipoContratoController;
 use App\Http\Controllers\UsuarioController;
@@ -58,7 +59,7 @@ Route::middleware([
     //Rutas para Registro Compras
     Route::resource('recompras', ComprasController::class)->names('recompras');
 
-    //Rutas para Registro Compras
-    //Route::resource('recompras', ComprasController::class)->names('recompras');
+    //Rutas para paises
+    Route::resource('paises', PaisesController::class)->names('paises');
 });
 
