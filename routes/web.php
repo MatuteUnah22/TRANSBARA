@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CargasAgrController;
 use App\Http\Controllers\CargasEntController;
+use App\Http\Controllers\CargosController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\EmpleadoController;
@@ -70,7 +71,7 @@ Route::middleware([
     Route::resource('tipestados', EstadoController::class)->names('tipestados');
 
     //Rutas para paises COPIAS
-    Route::resource('paises', PaisesController::class)->names('paises');
+    Route::resource('tipcargos', CargosController::class)->names('tipcargos');
 
     //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');

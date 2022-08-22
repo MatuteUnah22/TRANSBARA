@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
 class CargosController extends Controller
@@ -13,7 +14,11 @@ class CargosController extends Controller
      */
     public function index()
     {
-        //
+        $response = Http::get('http://localhost:3000/cargos/');
+        $tipcargos = $response->json();
+        //dd($usuarios[0]);
+        return view('Parametrizacion.Cargos.index')->with('tipcargos', $tipcargos[0]);
+
     }
 
     /**
