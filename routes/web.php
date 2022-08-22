@@ -8,6 +8,7 @@ use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\CoPendientesController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\ObjetosController;
 use App\Http\Controllers\PaisesController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\TipoContratoController;
@@ -75,7 +76,7 @@ Route::middleware([
     Route::resource('tipcargos', CargosController::class)->names('tipcargos');
 
     //Rutas para paises COPIAS
-   // Route::resource('paises', PaisesController::class)->names('paises');
+    Route::resource('objetos', ObjetosController::class)->names('objetos');
 
     //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');
