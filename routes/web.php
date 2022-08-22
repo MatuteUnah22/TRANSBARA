@@ -3,6 +3,7 @@
 use App\Http\Controllers\CargasAgrController;
 use App\Http\Controllers\CargasEntController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\TipoContratoController;
@@ -53,6 +54,9 @@ Route::middleware([
 
     //Rutas para tipo de contrato
     Route::resource('tipcontratos', TipoContratoController::class)->names('tipcontratos');
+
+    //Rutas para Registro Compras
+    Route::resource('recompras', ComprasController::class)->names('recompras');
 
 });
 
