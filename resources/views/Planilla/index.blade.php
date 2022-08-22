@@ -148,7 +148,7 @@
                 </thead>
                 <tbody>
                   @php $i=1;@endphp
-                  @foreach ($planilla as $planilla)
+                  @foreach ($planillas as $planilla)
                   <tr>
                       <td>{{$i}}</td>
                       <td>{{$usuario['usr_password']}}</td>

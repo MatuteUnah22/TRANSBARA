@@ -10,6 +10,7 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\ObjetosController;
 use App\Http\Controllers\PaisesController;
+use App\Http\Controllers\PlanillaController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\TipoContratoController;
 use App\Http\Controllers\UsuarioController;
