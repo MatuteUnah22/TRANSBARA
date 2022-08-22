@@ -5,6 +5,7 @@ use App\Http\Controllers\CargasEntController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\PaisesController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\TipoContratoController;
@@ -66,7 +67,7 @@ Route::middleware([
     //Route::resource('recompras', ComprasController::class)->names('recompras');
 
     //Rutas para paises COPIAS
-   // Route::resource('paises', PaisesController::class)->names('paises');
+    Route::resource('tipestados', EstadoController::class)->names('tipestados');
 
     //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');
