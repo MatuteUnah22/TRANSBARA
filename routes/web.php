@@ -70,7 +70,7 @@ Route::middleware([
     Route::resource('tipestados', EstadoController::class)->names('tipestados');
 
     //Rutas para paises COPIAS
-   // Route::resource('paises', PaisesController::class)->names('paises');
+    Route::resource('paises', PaisesController::class)->names('paises');
 
     //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');
