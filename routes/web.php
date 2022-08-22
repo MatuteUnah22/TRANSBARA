@@ -4,6 +4,7 @@ use App\Http\Controllers\CargasAgrController;
 use App\Http\Controllers\CargasEntController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ComprasController;
+use App\Http\Controllers\CoPendientesController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\PaisesController;
 use App\Http\Controllers\ProveedorController;
@@ -62,8 +63,8 @@ Route::middleware([
     //Rutas para paises
     Route::resource('paises', PaisesController::class)->names('paises');
 
-    //Rutas para Registro Compras COPIAS
-    //Route::resource('recompras', ComprasController::class)->names('recompras');
+    //Rutas para Compras Pendientes
+    Route::resource('copendientes', CoPendientesController::class)->names('copendientes');
 
     //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');
@@ -79,5 +80,6 @@ Route::middleware([
 
    //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');
+
 });
 
