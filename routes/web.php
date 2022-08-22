@@ -68,10 +68,10 @@ Route::middleware([
     //Rutas para Compras Pendientes
     Route::resource('copendientes', CoPendientesController::class)->names('copendientes');
 
-    //Rutas para paises COPIAS
+    //Rutas para tipo de estados
     Route::resource('tipestados', EstadoController::class)->names('tipestados');
 
-    //Rutas para paises COPIAS
+    //Rutas para tipo de cargos
     Route::resource('tipcargos', CargosController::class)->names('tipcargos');
 
     //Rutas para paises COPIAS
@@ -83,5 +83,13 @@ Route::middleware([
    //Rutas para paises COPIAS
    // Route::resource('paises', PaisesController::class)->names('paises');
 
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+    //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
+
+   //Rutas para paises COPIAS
+   // Route::resource('paises', PaisesController::class)->names('paises');
 });
 
