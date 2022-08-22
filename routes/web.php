@@ -58,5 +58,7 @@ Route::middleware([
     //Rutas para Registro Compras
     Route::resource('recompras', ComprasController::class)->names('recompras');
 
+    //Rutas para Registro Compras
+    //Route::resource('recompras', ComprasController::class)->names('recompras');
 });
 
