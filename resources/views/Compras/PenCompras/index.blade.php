@@ -41,7 +41,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id="modalTitle" >Registrar Compras Pendientes por Pagar</h5>
-                        <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                        <button href="{{route('compras.create')}}" type="button" class="close" data-dismiss="modal" >&times;</button>
                       </div>
                       <div class="modal-body">                        
 

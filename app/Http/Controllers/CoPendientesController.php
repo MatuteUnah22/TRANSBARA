@@ -29,6 +29,7 @@ class CoPendientesController extends Controller
     public function create()
     {
         //
+        return view('compra.create');
     }
 
     /**
