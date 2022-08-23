@@ -57,40 +57,40 @@
                                 <div class="row g-3">
                                   <div class="col">
                                     <label for="">Usuario</label> 
-                                    <input type="text" id="cod_usuario" class="form-control" placeholder="Ingrese el Usuario" aria-label="Primer Nombre">
+                                    <input type="text" name="cod_usuario" id="cod_usuario" class="form-control" placeholder="Ingrese el Usuario" aria-label="Primer Nombre">
                                   </div>
                                   <div class="col">
                                     <label for="">Password</label> 
-                                    <input type="password" id="password" class="form-control" placeholder=" Ingrese la contraseña" aria-label="Segundo nombre">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder=" Ingrese la contraseña" aria-label="Segundo nombre">
                                   </div>
                                 </div>
 
                                 <div class="row g-3">
                                   <div class="col">
                                       <label for="">Nombre del Usuario</label>
-                                      <input type="text" id="nombre_usuario" class = "form-control" placeholder="Ingrese Nombre del Usuario">
+                                      <input type="text" name="nombre_usuario" id="nombre_usuario" class = "form-control" placeholder="Ingrese Nombre del Usuario">
                                   </div>
                                   <div class="col">
                                       <label for="">Codigo de Empleado</label> 
-                                      <input type="text" id="cod_empleado" class="form-control" placeholder="Ingrese el Codigo de Empleado">
+                                      <input type="text" name="cod_empleado" id="cod_empleado" class="form-control" placeholder="Ingrese el Codigo de Empleado">
                                   </div>
                                 </div>
                                 
                                 <div class="row g-3">
                                   <div class="col">
                                     <label for="">Estatus</label>
-                                    <input type="text" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Usuario">
+                                    <input type="text" name="cod_estatus" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Usuario">
                                   </div>
                                   <div class="col">
                                     <label for="">Tipo de Usuario</label>
-                                    <input type="text" id="cod_tipo_user" class= "form-control" placeholder="Ingrese el Tipo de Usuario">
+                                    <input type="text" name="cod_tipo_user" id="cod_tipo_user" class= "form-control" placeholder="Ingrese el Tipo de Usuario">
                                   </div>
                                 </div>
                                 
                                 <div class="row g-3">
                                   <div class="col">
                                     <label for="">Fecha de Creación</label>
-                                    <input type="text" id="fecha_crea_user" class = "form-control"  placeholder = "Ingrese la fecha de Creacion del Usuario">
+                                    <input type="text" name="fecha_crea_user" id="fecha_crea_user" class = "form-control"  placeholder = "Ingrese la fecha de Creacion del Usuario">
                                   </div>
                                 
                                 </div>

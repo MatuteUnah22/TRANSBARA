@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Output\NullOutput;
 
 class UsuarioController extends Controller
 {
@@ -39,7 +40,18 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        return "Hoal";
+        $response = Http::post('http://localhost:3000/usuarios/insertar_usuario/', [
+            'cod_usuario'=>"18",//$request->cod_usuario,
+            'password'=>"futbol24",//$request->password,
+            'nom_usuario'=>"Daniela",//$request->nombre_usuario,
+            'cod_estatus'=>1,//$request->cod_estatus,
+            'loguead'=>"s",//'s',
+            'cod_tipo_usuario'=>1,//$request->cod_tipo_user,
+            'usr_adicion'=>"sss",//Auth()->user()->username,
+            'usr_modificacion'=>"Gabriela",//Null,
+        ]);
+        dd($request, $response->json());
+        
     }
 
     /**
