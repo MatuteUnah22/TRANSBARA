@@ -41,7 +41,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id="modalTitle" >Registrar Compras Pendientes por Pagar</h5>
-                        <button href="{{route('compras.create')}}" type="button" class="close" data-dismiss="modal" >&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" >&times;</button>
                       </div>
                       <div class="modal-body">                        
 
@@ -61,13 +61,13 @@
                                         <input type="date" id="fecha_ingreso_emple" class = "form-control">
                                       </div>
                                       <div class="col">
-                                        <label for="">Nombre de la Empresa</label> 
+                                        <label for="">Artículo</label> 
                                         <input type="text" id="primer_nombre" class="form-control" placeholder="Ingrese el nombre de la Empresa." aria-label="Primer Nombre">
                                       </div>
                                     </div>
                                     <div class="row g-3">
                                       <div class="col">
-                                        <label for="">Artículo</label> 
+                                        <label for=""></label> 
                                         <input type="text" id="segundo_nombre" class="form-control" placeholder="Ingrese el Artículo." aria-label="Segundo nombre">
                                       </div>
                                       <div class="col">

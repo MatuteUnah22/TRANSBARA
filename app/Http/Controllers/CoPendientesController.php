@@ -28,8 +28,19 @@ class CoPendientesController extends Controller
      */
     public function create()
     {
-        //
-        return view('compra.create');
+        //$response = Http::post('http://localhost:3000/compras_pendientes/insertar_compraspendientes/', [
+        //    'PI_cod_compras_por_pagar'=>$request->cod_usuario,
+        //    'PD_pagos_pendientes'=>$request->password,
+        //    'PV_descripcion'=>$request->nombre_usuario,
+        //    'PI_usr_cod_estatus'=>$request->cod_estatus,
+        //    'PV_usr_loguead'=>'s',
+        //    'PI_usr_cod_tipo_usuario'=>$request->cod_tipo_user,
+        //    'PV_usr_usr_adicion'=>Auth()->user()->username,
+        //    'PV_usr_usr_modificacion'=>Auth()->user()->username,
+        //]);
+        //dd($request, $response->json(),$request->cod_usuario);
+        
+        //return redirect('/usuarios');
     }
 
     /**

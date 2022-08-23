@@ -79,11 +79,11 @@
                                 <div class="row g-3">
                                   <div class="col">
                                     <label for="">Estatus</label>
-                                    <input type="text" name="cod_estatus" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Usuario">
+                                    <input type="number" name="cod_estatus" id="cod_estatus" class = "form-control" placeholder="Ingrese el Estatus del Usuario">
                                   </div>
                                   <div class="col">
                                     <label for="">Tipo de Usuario</label>
-                                    <input type="text" name="cod_tipo_user" id="cod_tipo_user" class= "form-control" placeholder="Ingrese el Tipo de Usuario">
+                                    <input type="number" name="cod_tipo_user" id="cod_tipo_user" class= "form-control" placeholder="Ingrese el Tipo de Usuario">
                                   </div>
                                 </div>
                                 
@@ -98,7 +98,7 @@
 
                                 <div class="modal-footer">
                                   <div class="btnagregar">
-                                    <input type="submit" id="btn_agregar"  value="Agregar Usuario" class = "btn btn-success">
+                                    <input  type="submit" id="btn_agregar"  value="Agregar Usuario" class = "btn btn-success">
                                   </div>
                                 </div>
                               </form>

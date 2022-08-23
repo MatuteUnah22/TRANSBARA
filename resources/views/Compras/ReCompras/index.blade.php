@@ -57,35 +57,14 @@
                                 <form class="empleado">
                                   <div class="row g-3">
                                     <div class="col">
-                                      <label for="">Fecha de Compra</label>
+                                      <label for="">Detalle de compra semanales</label>
                                       <input type="date" id="fecha_ingreso_emple" class = "form-control">
                                     </div>                      
                                     <div class="col">
-                                      <label for="">Artículo</label> 
+                                      <label for="">Código de registro</label> 
                                       <input type="text" id="segundo_nombre" class="form-control" placeholder="Ingrese el Artículo." aria-label="Segundo nombre">
-                                    </div>
-                                  </div>
-                                  <div class="row g-3">
-                                    <div class="col">
-                                      <label for="">Cantidad</label> 
-                                      <input type="text" id="primer_nombre" class="form-control" placeholder="Ingrese la Cantidad." aria-label="Primer Nombre">
-                                    </div>
-                                    <div class="col">
-                                      <label for="">Proveedor</label> 
-                                      <input type="text" id="segundo_apelido_emple" class="form-control" placeholder="Ingrese el Proveedor.">
-                                    </div>
-                                  </div>
-                                  <br>
-                                  <div class="row g-3">
-                                    <div class="col">
-                                      <label for="">Dirección</label>
-                                      <input type="text" id="ident_empleado" class = "form-control" placeholder="Ingrese la Dirección.">
-                                    </div>
-                                    <div class="col">
-                                      <label for="">Total de Compra</label>
-                                      <input type="text" id="telefono_emple" class= "form-control" placeholder="Ingrese el total de la Compra.">
-                                    </div>
-                                  </div>
+                                    </div>                               
+                                  
                                   <br>              
                                   <br>
                                   <div class="btnagregar">
@@ -108,13 +87,11 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>Fecha de Compra</th>
-                    <th>Artículo</th>
-                    <th>Cantidad</th>
-                    <th>Proveedor</th>
-                    <th>Dirección</th>
-                    <th>Total de Compra</th>
+                    <th>Código de registro</th>
+                    <th>Detalle de compra semanales</th>
+                    <th>Fecha compras</th>
                     <th>Acciones</th>
+                    
                   </tr>
                 </thead>
                 <tbody>
@@ -122,12 +99,9 @@
                   @foreach ($recompras as $recompra)
                   <tr>
                       <td>{{$i}}</td>
-                      <td>{{$usuario['usr_password']}}</td>
-                      <td>{{$usuario['usr_nom_usuario']}}</td>
-                      <td>{{$usuario['usr_cod_empleado']}}</td>
-                      <td>{{$usuario['usr_cod_estatus']}}</td>
-                      <td>{{$usuario['usr_cod_tipo_usuario']}}</td>
-                      <td>{{$usuario['usr_fec_ult_conex']}}</td>
+                      
+                      <td>{{$recompra['Detalle_compras_semanales']}}</td>
+                      <td>{{$recompra['fecha_compra']}}</td>
                       
                       <td>
                         <button class="btn btn-outline-dark" onclick="CargarPedido('+MiItems[i].ID+')"><i class="fas fa-edit"></i></button>

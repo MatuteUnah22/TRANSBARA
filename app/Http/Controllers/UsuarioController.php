@@ -41,16 +41,18 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         $response = Http::post('http://localhost:3000/usuarios/insertar_usuario/', [
-            'cod_usuario'=>"18",//$request->cod_usuario,
-            'password'=>"futbol24",//$request->password,
-            'nom_usuario'=>"Daniela",//$request->nombre_usuario,
-            'cod_estatus'=>1,//$request->cod_estatus,
-            'loguead'=>"s",//'s',
-            'cod_tipo_usuario'=>1,//$request->cod_tipo_user,
-            'usr_adicion'=>"sss",//Auth()->user()->username,
-            'usr_modificacion'=>"Gabriela",//Null,
+            'PV_usr_cod_usuario'=>$request->cod_usuario,
+            'PV_usr_password'=>$request->password,
+            'PV_usr_nom_usuario'=>$request->nombre_usuario,
+            'PI_usr_cod_estatus'=>$request->cod_estatus,
+            'PV_usr_loguead'=>'s',
+            'PI_usr_cod_tipo_usuario'=>$request->cod_tipo_user,
+            'PV_usr_usr_adicion'=>Auth()->user()->username,
+            'PV_usr_usr_modificacion'=>Auth()->user()->username,
         ]);
-        dd($request, $response->json());
+        //dd($request, $response->json(),$request->cod_usuario);
+
+        return redirect('/usuarios');
         
     }
 

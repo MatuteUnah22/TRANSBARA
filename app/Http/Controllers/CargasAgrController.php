@@ -38,9 +38,20 @@ class CargasAgrController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $response = Http::post('http://localhost:3000/cargas_enviar/insertar_cargas_enviar/', [
+            'PD_Kg_Carga_Enviar'=>$request->peso_carga_agreg,
+            'PV_des_Carga_Enviar'=>$request->descripcion,
+            'PI_can_Carga_Enviar'=>$request->cantidad,
+            'PI_cod_Carga_Futura'=>$request->fecha_carga_enviar,
+            //'PV_cenv_usr_adicion'=>Auth()->user()->username,
+            //'PV_cenv_usr_modifico'=>Auth()->user()->username,
+            
+        ]);
+        dd($request, $response->json(),$request->cod_usuario); 
+        
+        //return redirect('/agcargas');
     }
-
+    
     /**
      * Display the specified resource.
      *

@@ -57,21 +57,21 @@
                                 <div class="row g-3">
                                   <div class="col">
                                     <label for="">Cantidad</label>
-                                    <input type="text" id="cantidad" class="form-control" placeholder="Ingrese la cantidad exacta de la carga">
+                                    <input type="text" name="cantidad" id="cantidad" class="form-control" placeholder="Ingrese la cantidad exacta de la carga">
                                   </div>
                                   <div class="col">
                                     <label for="">Peso (Kg)</label>
-                                    <input type="text" id="peso_carga_agreg" class="form-control" placeholder="Ingrese el peso en Kilos">
+                                    <input type="text" name="peso_carga_agreg" id="peso_carga_agreg" class="form-control" placeholder="Ingrese el peso en Kilos">
                                   </div>
                                 </div>                  
                                 <div class="row g-3">                      
                                   <div class="col">
                                     <label for="">Descripción</label>
-                                    <input type="text" id="descripcion" class="form-control" placeholder="Ingrese la descripción de la carga">
+                                    <input type="text" name="descripcion" id="descripcion" class="form-control" placeholder="Ingrese la descripción de la carga">
                                   </div>                      
                                   <div class="col">
                                     <label for="">Fecha de Ingreso</label>
-                                    <input type="date" id="fecha_carga_enviar" class = "form-control"  >
+                                    <input type="date" name="fecha_carga_enviar" id="fecha_carga_enviar" class = "form-control"  >
                                   </div>
                                 </div>
                                 <br> 
@@ -109,13 +109,13 @@
                   @foreach ($agcargas as $agcarga)
                   <tr>
                       <td>{{$i}}</td>
-                      <td>{{$usuario['usr_password']}}</td>
-                      <td>{{$usuario['usr_nom_usuario']}}</td>
-                      <td>{{$usuario['usr_cod_empleado']}}</td>
-                      <td>{{$usuario['usr_cod_estatus']}}</td>
-                      <td>{{$usuario['usr_cod_tipo_usuario']}}</td>
-                      <td>{{$usuario['usr_fec_ult_conex']}}</td>
-                      
+                      <td>{{$agcarga['Kg_Carga_Enviar']}}</td>
+                      <td>{{$agcarga['des_Carga_Enviar']}}</td>
+                      <td>{{$agcarga['can_Carga_Enviar']}}</td>
+                      <td>{{$agcarga['cod_Carga_Futura']}}</td>
+                      <!--<td>{{$agcarga['cenv_usr_adicion']}}</td>-->
+                      <!--<td>{{$agcarga['cenv_usr_modifico']}}</td>-->
+
                       <td>
                         <button class="btn btn-outline-dark" onclick="CargarPedido('+MiItems[i].ID+')"><ii class="fas fa-edit"></ii></button>
                         <button class="btn btn-outline-danger" onclick="EliminarPedido('+MiItems[i].ID+')"><ii class="fas fa-trash"></ii></button>
