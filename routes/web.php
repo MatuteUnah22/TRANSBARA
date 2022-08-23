@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::middleware([
@@ -36,9 +36,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/inicio', function () {
+        return view('inicio.index');
+    })->name('inicio');
 
     //Rutas para usuario
     Route::resource('usuarios', UsuarioController::class)->names('usuarios');
