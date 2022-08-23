@@ -391,7 +391,7 @@ return [
                         ],                        
                     ],
                 ],
-                [
+                /*[
                     'text'    => 'Reportes',
                     'icon'    => 'fas fa-fw fa-clipboard',
                     'nav-item'=> 'menu-open active',
@@ -447,7 +447,7 @@ return [
                             'url'        => '/replafec',
                         ],
                     ],
-                ],
+                ],*/
                 [
                     'text'    => 'Permisos',
                     'icon'    => 'fas fa-fw fa-edit',
