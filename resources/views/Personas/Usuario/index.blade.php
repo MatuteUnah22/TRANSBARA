@@ -140,7 +140,7 @@
                       
                       <td>
                         <button class="btn btn-outline-dark" onclick="CargarPedido('+MiItems[i].ID+')"><i class="fas fa-edit"></i></button>
-                        <button class="btn btn-outline-danger" onclick="EliminarPedido('+MiItems[i].ID+')"><i class="fas fa-trash"></i></button>
+                        <button  class="btn btn-outline-danger" onclick="EliminarPedido"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
                     @php $i++;@endphp

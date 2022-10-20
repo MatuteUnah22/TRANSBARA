@@ -98,6 +98,6 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //$response = Http::delete('http://localhost:3000/usuarios/eliminar_usuario/'. $id);
     }
 }
