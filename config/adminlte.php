@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Transportes Barahona Morazán',
+    'title' => 'AdminLTE 3',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b> TBM</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/ETBM3.png',
+    'logo' => '<b>Admin</b>LTE',
+    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'TBM',
+    'logo_img_alt' => 'AdminLTE',
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/ETBM3.png',
+            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
@@ -229,13 +229,13 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => '/inicio',
+    'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => 'user/profile',
+    'profile_url' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -270,271 +270,30 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
-            'topnav_right' => false,
+            'topnav_right' => true,
         ],
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+
         // Sidebar items:
-        /*[
+        [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
-        ],*/
+        ],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text'    => 'Gráficas',
-            'icon'    => 'fas fa-fw fa-chart-pie ',
-            'nav-item'=> 'menu-open active',
-            'submenu' => [
-                [
-                    'text'       => 'Gráficos',
-                    'icon_color' => 'cyan',
-                    'url'        => '#',
-                ],
-                
-            ],
+            'text'        => 'pages',
+            'url'         => 'admin/pages',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 4,
+            'label_color' => 'success',
         ],
-        ['header' => 'MÓDULOS'],
-        //<!-- Main Sidebar Container -->
-        [
-            'text'    => 'Módulos',
-            'icon'    => 'fas',
-            'items'    => ' menu-open act active',
-            'submenu' => [
-                [
-                    'text'    => 'Personas',
-                    'icon'    => 'fas fa-fw fa-user',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Empleados',
-                            'icon_color' => 'cyan',
-                            'url'        => '/empleados',
-                        ],
-                        [
-                            'text'       => 'Usuarios',
-                            'icon_color' => 'cyan',
-                            'url'        => '/usuarios',
-                        ],
-                        [
-                            'text'       => 'Clientes',
-                            'icon_color' => 'cyan',
-                            'url'        => '/clientes',
-                        ],
-                        [
-                            'text'       => 'Proveedores',
-                            'icon_color' => 'cyan',
-                            'url'        => '/proveedores',
-                        ],
-                    ],
-                ],
-                [
-                    'text'    => 'Compras',
-                    'icon'    => 'fas fa-fw fa-shopping-cart',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Registro de compras',
-                            'icon_color' => 'cyan',
-                            'url'        => '/recompras',
-                        ],
-                        [
-                            'text'       => 'Compras pendientes a pagar',
-                            'icon_color' => 'cyan',
-                            'url'        => '/copendientes',
-                        ],
-                    ],
-                ],
-                [
-                    'text'    => 'Servicios',
-                    'icon'    => 'fas fa-fw fa-tools',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Agregar cargas',
-                            'icon_color' => 'cyan',
-                            'url'        => '/agcargas',
-                        ],
-                        [
-                            'text'       => 'Cargas entregadas',
-                            'icon_color' => 'cyan',
-                            'url'        => '/encargas',
-                        ],
-                    ],
-                ],
-                [
-                    'text'    => 'Facturación',
-                    'icon'    => 'fas fa-fw fa-tasks',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Agregar factura',
-                            'icon_color' => 'cyan',
-                            'url'        => '/agfacturas',
-                        ],                        
-                    ],
-                ],
-                [
-                    'text'    => 'Planillas',
-                    'icon'    => 'fas fa-fw fa-clipboard',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Planilla',
-                            'icon_color' => 'cyan',
-                            'url'        => '/planillas',
-                        ],                        
-                    ],
-                ],
-                /*[
-                    'text'    => 'Reportes',
-                    'icon'    => 'fas fa-fw fa-clipboard',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Reporte empleados',
-                            'icon_color' => 'cyan',
-                            'url'        => '/reempleados',
-                        ],
-                        [
-                            'text'       => 'Reporte usuarios',
-                            'icon_color' => 'cyan',
-                            'url'        => '/reusuarios',
-                        ],
-                        [
-                            'text'       => 'Reporte clientes',
-                            'icon_color' => 'cyan',
-                            'url'        => '/reclientes',
-                        ],
-                        [
-                            'text'       => 'Reporte proveedores',
-                            'icon_color' => 'cyan',
-                            'url'        => '/reproveedores',
-                        ],
-                        [
-                            'text'       => 'Reporte de compras por fecha',
-                            'icon_color' => 'cyan',
-                            'url'        => '/recomprasfe',
-                        ],
-                        [
-                            'text'       => 'Reporte de compras por producto',
-                            'icon_color' => 'cyan',
-                            'url'        => '/recompraspro',
-                        ],
-                        [
-                            'text'       => 'Reporte de viajes semanal',
-                            'icon_color' => 'cyan',
-                            'url'        => '/reviajessem',
-                        ],
-                        [
-                            'text'       => 'Reporte de viajes por cliente',
-                            'icon_color' => 'cyan',
-                            'url'        => '/reviajescli',
-                        ],
-                        [
-                            'text'       => 'Reporte de facturación semanal',
-                            'icon_color' => 'cyan',
-                            'url'        => '/refacturacion',
-                        ],
-                        [
-                            'text'       => 'Reporte de planilla a pagar por fecha',
-                            'icon_color' => 'cyan',
-                            'url'        => '/replafec',
-                        ],
-                    ],
-                ],*/
-                [
-                    'text'    => 'Permisos',
-                    'icon'    => 'fas fa-fw fa-edit',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Permiso por tipo de usuario',
-                            'icon_color' => 'cyan',
-                            'url'        => '/pertipusuario',
-                        ],                        
-                    ],
-                ],
-                [
-                    'text'    => 'Parametrización',
-                    'icon'    => 'fas fa-fw fa-sliders-h',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Tipo de usuarios',
-                            'icon_color' => 'cyan',
-                            'url'        => '/tipusuarios',
-                        ],
-                        [
-                            'text'       => 'Tipo de persona',
-                            'icon_color' => 'cyan',
-                            'url'        => '/tippersonas',
-                        ],
-                        [
-                            'text'       => 'Tipo de estado',
-                            'icon_color' => 'cyan',
-                            'url'        => '/tipestados',
-                        ],
-                        [
-                            'text'       => 'Tipo de cargos',
-                            'icon_color' => 'cyan',
-                            'url'        => '/tipcargos',
-                        ],
-                        [
-                            'text'       => 'Tipo de contrato',
-                            'icon_color' => 'cyan',
-                            'url'        => '/tipcontratos',
-                        ],
-                        [
-                            'text'       => 'Paises',
-                            'icon_color' => 'cyan',
-                            'url'        => '/paises',
-                        ],
-                        [
-                            'text'       => 'Objetos',
-                            'icon_color' => 'cyan',
-                            'url'        => '/objetos',
-                        ],
-                    ],
-                ],
-                [
-                    'text'    => 'Bitácora',
-                    'icon'    => 'fas fa-fw fa-map-marker-alt',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Regitro de actividad',
-                            'icon_color' => 'cyan',
-                            'url'        => '/regactividad',
-                        ],                        
-                    ],
-                ],
-                [
-                    'text'    => 'Administración',
-                    'icon'    => 'fas fa-fw fa-database',
-                    'nav-item'=> 'menu-open active',
-                    'submenu' => [
-                        [
-                            'text'       => 'Copia de respaldo',
-                            'icon_color' => 'cyan',
-                            'url'        => '/respaldos',
-                        ],
-                        [
-                            'text'       => 'Restaurar',
-                            'icon_color' => 'cyan',
-                            'url'        => '/restauracion',
-                        ],                      
-                    ],
-                ],
-            ],
-        ],
-        //<!-- End Main Sidebar Container -->
-       
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
@@ -546,7 +305,7 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        /*[
+        [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
@@ -599,7 +358,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],*/
+        ],
     ],
 
     /*

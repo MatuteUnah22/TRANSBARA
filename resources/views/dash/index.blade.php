@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    
+    @dump($errors)
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid  col-lg-5">
@@ -40,7 +40,9 @@
   <div class="float-right d-none d-sm-block">
     <b>Version</b> 1.0.0
   </div>
-  <strong>Copyright &copy; 2022-2023 <a href="#">Empresa de Transportes Barahona Morazán</a>.</strong> All rights reserved.
+  <div>
+    <strong>Copyright &copy; 2022-2023 <a href="#">Empresa de Transportes Barahona Morazán</a>.</strong> All rights reserved.
+  </div>
 @stop
 
 @section('css')

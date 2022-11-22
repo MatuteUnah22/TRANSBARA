@@ -35,10 +35,10 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
-])->group(function () {
-    Route::get('/inicio', function () {
-        return view('inicio.index');
-    })->name('inicio');
+    ])->group(function () {
+    Route::get('/dash', function () {
+        return view('dash.index');
+    })->name('dash');
 
     //Rutas para usuario
     Route::resource('usuarios', UsuarioController::class)->names('usuarios');
@@ -47,7 +47,11 @@ Route::middleware([
     Route::resource('empleados', EmpleadoController::class)->names('empleados');
 
     //Rutas para clientes
+    //Route::resource('clientes', ClienteController::class)->names('clientes');
+    
+    //Rutas para clientes creadas en el proyecto tbm
     Route::resource('clientes', ClienteController::class)->names('clientes');
+
 
     //Rutas para clientes
     Route::resource('proveedores', ProveedorController::class)->names('proveedores');

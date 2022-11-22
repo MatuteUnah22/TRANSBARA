@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cliente;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class TablasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +13,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //$response = Http::get('http://localhost:3000/clientes');
-        //$clientes = $response->json();
-        //dd($usuarios[0]);
-        //return view('Personas.Cliente.index')->with('clientes', $clientes[0]);
-        return view('Personas.cliente.index', ['clientes' => Cliente::all()]);
+        //
     }
 
     /**
